@@ -1,0 +1,61 @@
+RewriteEngine On
+RewriteBase /
+
+#------------------------------------------
+#--SEO preferences-------------------------
+#------------------------------------------
+RewriteRule ^sitemap.xml$ sitemap.xml [L] 
+RewriteRule ^favicon.ico$ favicon.ico [L] 
+RewriteRule ^robots.txt$ robots.txt [L] 
+#----Template for unique file sharing
+#RewriteRule ^somefile.ext$ somefile.ext [L] 
+
+
+#----Universal www-subdomain redirect------
+RewriteRule ^(.*)$ - [E=PROTOCOL:http]
+RewriteCond %{HTTPS} ^on$ [NC]
+RewriteRule ^(.*)$ - [E=PROTOCOL:https]
+#	for redirect from none. to www
+RewriteCond %{HTTP_HOST} !^(.+)\.(.*) [NC]
+
+RewriteCond %{SERVER_PORT} ^80$
+RewriteCond %{REQUEST_URI} !^/robots\.txt$
+
+#	for redirect from none. to www
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+#########Adding null-page fix##########
+RewriteCond %{QUERY_STRING} ^p=0$
+RewriteRule ^(.*)$ %{ENV:PROTOCOL}://%{HTTP_HOST}%{REQUEST_URI}? [R=301,L]
+#######################################
+
+
+RewriteCond %{REQUEST_URI} ^/index\.(.+)$
+RewriteRule ^.*$ %{ENV:PROTOCOL}://%{HTTP_HOST}/? [R=301,L]
+
+RewriteRule ^(.*)?$	generator.php [L]
+
+#------------------------------------------
+#--Server preferences----------------------
+#------------------------------------------
+#----PHP display errors enabling
+php_flag display_errors on 
+php_value error_reporting 30719
+
+#------------------------------------------
+#----PCRE limit values fix for PHP 5.2
+php_value pcre.backtrack_limit 100000000000
+php_value pcre.recursion_limit 100000000000
+
+#------------------------------------------
+#----PHP memory limit increase
+# php_value memory_limit 256M
+
+#------------------------------------------
+#----PHP other standart limits
+php_value post_max_size 128M
+php_value upload_max_filesize 64M				
+
+#------------------------------------------
+#----Adding PHP5 handler-------------------
+#AddType application/x-httpd-php5 php

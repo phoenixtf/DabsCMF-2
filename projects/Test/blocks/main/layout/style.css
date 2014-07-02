@@ -1,0 +1,24 @@
+@import url(css/normalize.css);
+
+html,
+body {
+	min-width: 985px;
+
+	background: #fff;
+
+	color: #3c3c3c;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	line-height: 17px;
+
+}
+a {color: #00f;}
+a:hover {color: #f00;}
+
+.clear {clear:both;overflow:hidden;height:0;position:relative}
+
+.layout {
+	clear: both;
+	margin: auto;
+	max-width: 1400px;
+}

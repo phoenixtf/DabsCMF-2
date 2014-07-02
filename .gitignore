@@ -1,0 +1,16 @@
+*.log
+*.bash*
+*.sql
+*.tgz
+*.gz
+logs/*
+log.txt
+.idea/
+/.idea/
+log.txt
+*.ini
+cache/*
+/nbproject/private/
+.idea/*
+projects/MTK/*
+minefield/*
