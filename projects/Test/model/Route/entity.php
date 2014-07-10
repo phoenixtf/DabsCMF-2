@@ -1,5 +1,5 @@
 <?
-namespace MTK\Model\Route;
+namespace Test\Model\Route;
 
 use CMS\Project\Model\Entity as ModelEntity;
 use CMS\Project\Model\Error as ModelError;

@@ -1,7 +1,7 @@
 <?
-namespace MTK\Model\Property\Integer;
+namespace Test\Model\Property\Integer;
 
-use MTK\Model\Property\Entity as Property;
+use Test\Model\Property\Entity as Property;
 
 class Entity extends Property {
 

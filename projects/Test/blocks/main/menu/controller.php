@@ -1,5 +1,5 @@
 <?
-namespace MTK\Blocks;
+namespace Test\Blocks;
 
 use CMS\Project\Block\Entity as Block;
 use CMS\Project\Block\Error as Error;

@@ -1,6 +1,6 @@
 <?
 
-namespace MTK\Model\Article;
+namespace Test\Model\Article;
 
 use CMS\Project\Model\Manager as ModelManager;
 
@@ -29,7 +29,7 @@ WHERE
 			$this->config->fields,
 			$id
 		);
-		if (empty($id)) throw new Error(Error::GET_NO_RESULT);
+		if (empty($row)) throw new Error(Error::GET_NO_RESULT);
 		return current($this->populate($row, $this));
 	}
 

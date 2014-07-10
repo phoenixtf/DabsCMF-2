@@ -22,3 +22,7 @@ a:hover {color: #f00;}
 	margin: auto;
 	max-width: 1400px;
 }
+
+.layout__header {
+	margin:10px 0 16px;
+}

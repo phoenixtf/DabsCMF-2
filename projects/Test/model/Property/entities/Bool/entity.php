@@ -1,7 +1,7 @@
 <?
-namespace MTK\Model\Property\Bool;
+namespace Test\Model\Property\Bool;
 
-use MTK\Model\Property\Entity as Property;
+use Test\Model\Property\Entity as Property;
 
 class Entity extends Property {
 

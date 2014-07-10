@@ -2,7 +2,7 @@
 /**
  * Класс ошибок модели Article
  */
-namespace MTK\Model\Property;
+namespace Test\Model\Property;
 
 use CMS\Project\Model\Error as ModelError;
 

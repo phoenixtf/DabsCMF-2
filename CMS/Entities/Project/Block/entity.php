@@ -132,7 +132,15 @@ abstract class Entity extends EntityAbstract {
 			$block->make();
 
 			// Если при make вышел косяк, не нужно заполнять его в массив блоков, чтобы не перезатереть такой же блок без ошибки
-			$this->blocks[$name] = $block;
+
+			// Если мы добавляем несколько одноимённых блоков, превращаем элемент с ключем имени блока в массив, и заполняем его
+			// этими блоками
+			if (!empty($this->blocks[$name])) {
+				if (!is_array($this->blocks[$name])) $this->blocks[$name] = array($this->blocks[$name]);
+				$this->blocks[$name][] = $block;
+			} else {
+				$this->blocks[$name] = $block;
+			}
 			foreach($this->config->technologies as $techId=>$techInfo) {
 				$this->childsTechPaths[$techId] = array_merge(
 					$this->childsTechPaths[$techId],

@@ -1,11 +1,11 @@
 <?
-namespace MTK\Blocks;
+namespace Test\Blocks;
 
 use CMS\Entity as CMS;
 use CMS\Project\Block\Error as Error;
 use CMS\Project\Block\Entity as Block;
-use MTK\Model\Article\Manager as ArticleManager;
-use MTK\Model\Article\Error as ArticleError;
+use Test\Model\Article\Manager as ArticleManager;
+use Test\Model\Article\Error as ArticleError;
 
 // Инклюдим менеджеры необходимых моделей
 //include_once(CMS_ROOT."/projects/MTK/model/Article/manager.php");
@@ -35,9 +35,8 @@ class newsItem extends Block {
 		if ($error->is()) throw $error;
 
 		return array(
-			"title" => $item->title,
-			"url" => $item->url,
-			"description" => $item->description,
+			"title" => $item->property->get("title")->get(),
+			"description" => $item->property->get("content")->cut(10),
 			"item" => $item
 		);
 	}

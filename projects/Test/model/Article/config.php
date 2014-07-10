@@ -1,6 +1,6 @@
 <?
 
-namespace MTK\Model\Article;
+namespace Test\Model\Article;
 
 use CMS\Project\Config as ProjectConfig;
 
@@ -20,6 +20,6 @@ class Config extends ProjectConfig {
 		"date-published"
 	);
 
-	public $catId = 381;
+	public $catId = 3;
 
 }

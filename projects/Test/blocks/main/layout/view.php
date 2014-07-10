@@ -28,8 +28,10 @@
 <?}?>
 </head>
 <body>
-<?=$this->blocks["header"]->getView()?>
 <div class="layout">
+	<div class="layout__header">
+		<?=$this->blocks["header"]->getView()?>
+	</div>
 	<div class="layout__block">
 		<?=$this->blocks["news"]->getView()?>
 <?if(!empty($this->mods["child-block"])){ // если есть дочерний блок, берем его ?>

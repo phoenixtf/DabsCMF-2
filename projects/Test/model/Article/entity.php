@@ -1,6 +1,6 @@
 <?
 
-namespace MTK\Model\Article;
+namespace Test\Model\Article;
 
 use CMS\Project\Model\Entity as ModelEntity;
 use CMS\Project\Model\Error as ModelError;
@@ -49,7 +49,7 @@ class Entity extends ModelEntity {
 
 	public function updateView($time) {
 		try {
-			$this->validateReg("view", $time);
+			//$this->validateReg("view", $time);
 		} catch(Error $e) {
 
 			// здесь можно поглотить ошибку, если её можно исправить внутри модели

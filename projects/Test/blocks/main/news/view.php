@@ -3,9 +3,8 @@
 <?}?>
 	<div class="news__body">
 		<div class="news__list">
-<?foreach($this->vars["items"] as $item){?>
-			<?=$item->property->get("title")->get()?>
-			(<?=$item->property->get("title")->cut(12)?>)
+<?foreach($this->blocks["newsItem"] as $item){?>
+	<?=$item->getView()?>
 <?}?>
 		</div>
 		<div class="news__time">

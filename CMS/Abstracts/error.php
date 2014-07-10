@@ -113,7 +113,11 @@ abstract class Error extends \Exception {
 	}
 
 	protected function getHtml() {
-		return implode('<br/>', $this->messages);
+		$prevErrors = array();
+		foreach($this->errors as $error) {
+			$prevErrors[] = $error->getAll("html");
+		}
+		return implode('<br/>', $this->messages)."<br/>".implode("<br/>", $prevErrors);
 	}
 
 	protected function getJson() {

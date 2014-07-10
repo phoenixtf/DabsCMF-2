@@ -1,7 +1,7 @@
 <?
-namespace MTK\Model;
+namespace Test\Model;
 
-use MTK\Config as ProjectConfig;
+use Test\Config as ProjectConfig;
 
 class Config extends ProjectConfig {
 

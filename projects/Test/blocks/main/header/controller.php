@@ -1,12 +1,11 @@
 <?
-namespace MTK\Blocks;
+namespace Test\Blocks;
 
 use CMS\Project\Block;
 
 class header extends Block\Entity {
 
 	protected function controller() {
-		$this->addBlock("auth");
 		/*
 		// Добавление блока
 		$this->var = $this->addBlock("blockname",

@@ -1,15 +1,20 @@
 <?
-namespace MTK\Blocks;
+namespace Test\Blocks;
 
 use CMS\Project\Block\Entity as Block;
-use MTK\Model\Article\Manager as ArticleManager;
+use Test\Model\Article\Manager as ArticleManager;
 
 class news extends Block {
 
 	public function controller($mods = array(), $vars = array()) {
 		$items = $this->getItems();
+		$itemsBlocks = [];
+		foreach($items as $item) {
+			$id = $item->property->get("id")->get();
+			$itemsBlocks[] = $this->addBlock("newsItem", array(), array("id" => $id));
+		}
 		return array(
-			"items" => $items,
+			"items" => $itemsBlocks,
 			"type" => empty($mods["type"])?null:$mods["type"]
 		);
 	}

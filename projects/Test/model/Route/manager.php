@@ -1,5 +1,5 @@
 <?
-namespace MTK\Model\Route;
+namespace Test\Model\Route;
 
 use CMS\Project\Model\Manager as ModelManager;
 

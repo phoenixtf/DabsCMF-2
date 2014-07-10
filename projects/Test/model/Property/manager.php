@@ -1,5 +1,5 @@
 <?
-namespace MTK\Model\Property;
+namespace Test\Model\Property;
 
 use CMS\Project\Model\Manager as PropertyManager;
 

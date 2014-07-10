@@ -1,7 +1,7 @@
 <?
-namespace MTK\Model\Route;
+namespace Test\Model\Route;
 
-use MTK\Model\Error as ModelError;
+use Test\Model\Error as ModelError;
 
 class Error extends ModelError {
 	const UNKNOWN = 1000;

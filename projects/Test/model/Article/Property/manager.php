@@ -1,7 +1,7 @@
 <?
-namespace MTK\Model\Article\Property;
+namespace Test\Model\Article\Property;
 
-use MTK\Model\Property\Manager as PropertyManager;
+use Test\Model\Property\Manager as PropertyManager;
 
 include_once __DIR__."/../../Property/manager.php";
 include_once __DIR__."/entities/content/entity.php";

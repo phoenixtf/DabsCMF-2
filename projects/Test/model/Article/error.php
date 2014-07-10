@@ -1,6 +1,6 @@
 <?
 
-namespace MTK\Model\Article;
+namespace Test\Model\Article;
 
 use CMS\Project\Model\Error as ModelError;
 

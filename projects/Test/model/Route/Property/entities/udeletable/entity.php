@@ -1,7 +1,7 @@
 <?
-namespace MTK\Model\Route\Property\undeletable;
+namespace Test\Model\Route\Property\undeletable;
 
-use MTK\Model\Property\Bool\Entity as PropertyType;
+use Test\Model\Property\Bool\Entity as PropertyType;
 
 class Entity extends PropertyType {
 
