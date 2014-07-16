@@ -34,9 +34,8 @@ class newsItem extends Block {
 
 		if ($error->is()) throw $error;
 
-		return array(
-			"title" => $item->property->get("title")->get(),
-			"description" => $item->property->get("content")->cut(10),
+		return array("title" => $item->property->get("title"),
+			"description" => $item->property->get("content"),
 			"item" => $item
 		);
 	}
